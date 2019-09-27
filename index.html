@@ -41,26 +41,29 @@
       <!--Rows have columns - column 1 (7/12) -->
       <div class="col-md-7 mb-4">
 
-        <h2>Interactive app!</h2>
+        <h2>Interactive app to find volume!</h2>
         <hr>
 
         <fieldset class="mt-4">
-          <label for="guest">Enter your name (2 to 40 characters):</label>
-          <input id="guest" type="text" minlength="2" maxlength="40" value="Lilly">
+          <label for="height">Enter a value for height(1 to 100):</label>
+          <input id="height" type="number" minlength="1" maxlength="100" value=3>
         </fieldset>
 
         <fieldset class="mt-4">
-          <label for="firstNumber">Enter first number (1 to 100):</label>
-          <input id="firstNumber" type="number" min="1" max="100" value=7>
-          <span id="firstWarning" class="text-danger"></span>
+          <label for="width">Enter a value for width (1 to 100):</label>
+          <input id="width" type="number" min="1" max="100" value=7>
+          <span id="width" class="text-danger"></span>
         </fieldset>
 
         <fieldset class="mt-4">
-          <label for="secondNumber">Enter second number (1 to 100):</label>
-          <input id="secondNumber" type="number" min="1" max="100" value="12">
-          <span id="secondWarning" class="text-danger"></span>
+          <label for="depth">Enter a value for depth (1 to 100):</label>
+          <input id="depth" type="number" min="1" max="100" value="12">
+          <span id="depth" class="text-danger"></span>
         </fieldset>
 
+      </div>
+      <div>
+        <label for="button">Calculate</label>
       </div>
       <!--end column 1-->
 
