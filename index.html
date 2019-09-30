@@ -47,6 +47,7 @@
         <fieldset class="mt-4">
           <label for="height">Enter a value for height(1 to 100):</label>
           <input id="height" type="number" minlength="1" maxlength="100" value=3>
+          <span id="height" class="text-danger"></span>
         </fieldset>
 
         <fieldset class="mt-4">
@@ -63,26 +64,10 @@
 
       </div>
       <div>
-        <button type="button">Calculate</button>
+        <button id = "addButton" class = "" type="button">Calculate</button>
+      
+       <p id = "result">Volume = 6000</p>
       </div>
-      <!--end column 1-->
-
-      <!--column 2 (5/12) -->
-      <div class="col-md-5 mb-4">
-        <h2>Try these:</h2>
-        <hr>
-        <button id="addButton" class="btn btn-primary">Add</button>
-        <button id="getJokeButton" class="btn btn-success">Get Joke</button>
-        <button id="clicker" class="btn btn-indigo">Coming soon!</button>
-        <hr>
-        <p id="result"></p>
-
-      </div>
-      <!-- end column 2-->
-
-    </div>
-    <!-- end row 1 -->
-
   </main>
 
   <!-- sticky footer with padding on y-axis (top and bottom) -->
