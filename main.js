@@ -1,4 +1,5 @@
-const multiply = (x, y, z) => { return x * y * z }
+
+const maximum = (x, y) => { return Math.max(x,y) }
 
 const validate = async (event) => {
   console.log(`triggered validate on ${event.target.id}`)
@@ -13,29 +14,31 @@ const validate = async (event) => {
 
 const updateWithAdd = async (event) => {
   document.querySelector('#result').innerHTML = ''
-  if (document.querySelector('#height').checkValidity() && document.querySelector('#width').checkValidity()&& document.querySelector('#depth').checkValidity()) {
+  if (document.querySelector('#number1').checkValidity() && document.querySelector('#number2').checkValidity()) {
     const regex = /[^a-zA-Z_]/g
-    const s = parseInt(document.querySelector('#height').value)
-    const i = parseInt(document.querySelector('#width').value)
-    const j = parseInt(document.querySelector('#depth').value)
-    const ans = `Your volume is ${multiply(s, i, j)}.`
+    const s = parseInt(document.querySelector('#number1').value)
+    const i = parseInt(document.querySelector('#number2').value)
+    
+    const ans = `Your max number is ${maximum(s, i)}.`
     document.querySelector('#result').innerHTML = ans
   }
 }
 
 
-// delegate to dynamic elements (e.g. when testing)
-// focusout is like blur, but it bubbles up
 
-document.addEventListener('focusout', event => {
-  if ((event.target && event.target.id === 'height') ||
-    (event.target && event.target.id === 'width')||
-    (event.target && event.target.id === 'depth')) {
-    validate(event)
-  }
-})
+
 
 document.addEventListener('click', event => {
   if (event.target && event.target.id === 'addButton') { updateWithAdd(event) }
 })
 
+/*
+function myfunction() {
+  let num1 = document.getElementById("number1").value
+  let num2 = document.getElementById("number2").value
+  let maxnum  = Math.max(num1,num2)
+  const ans = `Your max number is ${maxnum}.`
+  document.querySelector('#result').innerHTML = ans
+  d//ocument.getElementById("result").innerHTML = " The Maximun number is  " + maxnum
+}
+*/
